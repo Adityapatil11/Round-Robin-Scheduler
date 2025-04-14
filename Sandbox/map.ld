@@ -1,13 +1,13 @@
 MEMORY
 {
-    MEM: ORIGIN = 0x0,LENGTH=0x4000
+    MEM (rx) : ORIGIN = 0x00000000, LENGTH = 0x4000
 }
 
 SECTIONS
 {
-    .text:
+    .text :
     {
-        *(.vectors*)
-        *(.text*)
-    }>MEM
+        *(.vectors*)  /* Include vector table */
+        *(.text*)     /* Include all .text sections */
+    } > MEM
 }
