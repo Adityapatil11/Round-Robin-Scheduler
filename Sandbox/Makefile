@@ -1,6 +1,7 @@
 PROJECT = foo
 CPU ?= cortex-m3
-BOARD ?= stm32vldiscovery
+BOARD ?= stm32vldiscovery	
+#BOARD ?= mps2-an385	#Enable when running on Github Codespace
 
 qemu:
 	arm-none-eabi-as -mthumb -mcpu=$(CPU) -ggdb -c foo.S -o foo.o
