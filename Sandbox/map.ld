@@ -15,5 +15,5 @@ SECTIONS
     .data :
     {
         *(.data*)     /* Include all .data sections */
-    } > RAM
+    } > RAM AT > RAM
 }
